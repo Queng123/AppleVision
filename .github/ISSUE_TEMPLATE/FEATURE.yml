@@ -1,0 +1,45 @@
+name: Feature Request
+description: Suggest an idea for this project
+title: "[feature name]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: Describe the feature you are requesting
+      placeholder: Describe the feature you are requesting
+      render: markdown
+  - type: dropdown
+    id: typeOfFeature
+    attributes:
+      label: Type of Feature
+      description: What type of feature is this?
+      multiple: true
+      options:
+        - IA
+        - Backend
+        - Frontend
+        - Design
+        - Documentation
+        - CI/CD
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: timeNeeded
+    attributes:
+      label: Time Needed
+      description: How much time do you think this feature will take?
+      multiple: false
+      options:
+        - 1-2 hours
+        - 2-4 hours
+        - 4-8 hours
+        - 8-16 hours
+        - 16-32 hours
+        - 32-64 hours
+        - 64-128 hours
+        - 128+ hours
+    validations:
+      required: true
