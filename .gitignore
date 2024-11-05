@@ -20,9 +20,6 @@ xcuserdata/
 
 # Swift Package Manager
 .build/
-.swiftpm/xcode/package.xcworkspace/
-*.resolved
-Packages/
 
 # Swift Playgrounds
 timeline.xctimeline
