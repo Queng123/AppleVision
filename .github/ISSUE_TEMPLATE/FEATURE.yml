@@ -17,13 +17,9 @@ body:
       description: What type of feature is this?
       multiple: true
       options:
-        - IA
-        - Backend
-        - Frontend
-        - Design
         - Documentation
         - CI/CD
-        - Other
+        - Vision Pro
     validations:
       required: true
   - type: dropdown
