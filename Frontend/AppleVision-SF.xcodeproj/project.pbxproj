@@ -21,9 +21,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		645BA2682CD9EE08005E5E2D /* AppleVision-SF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppleVision-SF.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		645BA26C2CD9EE08005E5E2D /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
-		645BA27D2CD9EE09005E5E2D /* AppleVision-SFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppleVision-SFTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6428BCA02CF6926B00E70985 /* AppleVision-SF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppleVision-SF.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6428BCA12CF6926B00E70985 /* AppleVision-SFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppleVision-SFTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64DFD54B2CDADEA800985280 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -75,25 +75,17 @@
 			isa = PBXGroup;
 			children = (
 				645BA26A2CD9EE08005E5E2D /* AppleVision-SF */,
-				645BA26B2CD9EE08005E5E2D /* Packages */,
 				645BA2802CD9EE09005E5E2D /* AppleVision-SFTests */,
-				645BA2692CD9EE08005E5E2D /* Products */,
+				64DFD54C2CDADEA800985280 /* Packages */,
+				6428BCA02CF6926B00E70985 /* AppleVision-SF.app */,
+				6428BCA12CF6926B00E70985 /* AppleVision-SFTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
-		645BA2692CD9EE08005E5E2D /* Products */ = {
+		64DFD54C2CDADEA800985280 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				645BA2682CD9EE08005E5E2D /* AppleVision-SF.app */,
-				645BA27D2CD9EE09005E5E2D /* AppleVision-SFTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		645BA26B2CD9EE08005E5E2D /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				645BA26C2CD9EE08005E5E2D /* RealityKitContent */,
+				64DFD54B2CDADEA800985280 /* RealityKitContent */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -121,7 +113,7 @@
 				645BA26D2CD9EE08005E5E2D /* RealityKitContent */,
 			);
 			productName = "AppleVision-SF";
-			productReference = 645BA2682CD9EE08005E5E2D /* AppleVision-SF.app */;
+			productReference = 6428BCA02CF6926B00E70985 /* AppleVision-SF.app */;
 			productType = "com.apple.product-type.application";
 		};
 		645BA27C2CD9EE09005E5E2D /* AppleVision-SFTests */ = {
@@ -144,7 +136,7 @@
 			packageProductDependencies = (
 			);
 			productName = "AppleVision-SFTests";
-			productReference = 645BA27D2CD9EE09005E5E2D /* AppleVision-SFTests.xctest */;
+			productReference = 6428BCA12CF6926B00E70985 /* AppleVision-SFTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +168,7 @@
 			mainGroup = 645BA25F2CD9EE08005E5E2D;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 645BA2692CD9EE08005E5E2D /* Products */;
+			productRefGroup = 645BA25F2CD9EE08005E5E2D;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
