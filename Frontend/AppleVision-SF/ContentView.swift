@@ -29,13 +29,13 @@ struct ContentView: View {
 
     private func fetchEvents() {
         events = [
-            Event(title: "Tech Meetup", location: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), description: " AI and VR", imageMap: "star.fill", date: "2024-11-01"),
-            Event(title: "Art Expo", location: CLLocationCoordinate2D(latitude: 37.8010, longitude: -122.4350), description: " AI and VR", imageMap: "star.fill", date: "2024-11-01"),
-            Event(title: "Music Festival", location: CLLocationCoordinate2D(latitude: 37.8080, longitude: -122.4100), description: " AI and VR", imageMap: "star.fill", date: "2024-11-01"),
-            Event(title: "AI Talk", location: CLLocationCoordinate2D(latitude: 37.7833, longitude: -122.3969), description: " AI and VR", imageMap: "star.fill", date: "2024-11-01"),
-            Event(title: "Podium Discussion", location: CLLocationCoordinate2D(latitude: 37.7899, longitude: -122.3977), description: " AI and VR", imageMap: "star.fill", date: "2024-11-01"),
-            Event(title: "AI Agent Hackathon", location: CLLocationCoordinate2D(latitude: 37.7833, longitude: -122.3937), description: " AI and VR", imageMap: "star.fill", date: "2024-11-01"),
-            Event(title: "AI Agent Hackathon", location: CLLocationCoordinate2D(latitude: 37.7833, longitude: -122.3937), description: " AI and VR", imageMap: "star.fill", date: "2024-11-01"),
+            Event(title: "Tech Meetup", location: "SF Tech Hub", coordinates: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), description: " AI and VR", imageMap: "star.fill", date: "2024-11-01"),
+            Event(title: "Art Expo", location: "Golden Gate Gallery", coordinates: CLLocationCoordinate2D(latitude: 37.8010, longitude: -122.4350), description: " AI and VR", imageMap: "star.fill", date: "2024-11-01"),
+            Event(title: "Music Festival", location: "Pier 39", coordinates: CLLocationCoordinate2D(latitude: 37.8080, longitude: -122.4100), description: " AI and VR", imageMap: "star.fill", date: "2024-11-01"),
+            Event(title: "AI Talk", location: "GitHub HQ", coordinates: CLLocationCoordinate2D(latitude: 37.7833, longitude: -122.3969), description: " AI and VR", imageMap: "star.fill", date: "2024-11-01"),
+            Event(title: "Podium Discussion", location: "Notion HQ", coordinates: CLLocationCoordinate2D(latitude: 37.7899, longitude: -122.3977), description: " AI and VR", imageMap: "star.fill", date: "2024-11-01"),
+            Event(title: "AI Agent Hackathon", location: "AWS AI Loft", coordinates: CLLocationCoordinate2D(latitude: 37.7833, longitude: -122.3937), description: " AI and VR", imageMap: "star.fill", date: "2024-11-01"),
+            Event(title: "AI Agent Hackathon", location: "AWS AI Loft", coordinates: CLLocationCoordinate2D(latitude: 37.7833, longitude: -122.3937), description: " AI and VR", imageMap: "star.fill", date: "2024-11-01"),
 
         ]
     }

@@ -18,6 +18,17 @@ struct ExpandableMenu: View {
                 SearchBar(text: $searchText)
                     .padding(.horizontal)
                     .padding(.top)
+                List(filteredEvents) { event in
+                    VStack(alignment: .leading) {
+                        Text(event.title)
+                            .font(.headline)
+                        Text("\(event.location) - \(event.date)")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                    .padding(.vertical, 5)
+                }
+                .frame(maxHeight: 300)
             }
 
             Button(action: {

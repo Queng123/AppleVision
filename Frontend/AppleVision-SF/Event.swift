@@ -10,7 +10,8 @@ import MapKit
 struct Event: Identifiable {
     let id = UUID()
     let title: String
-    let location: CLLocationCoordinate2D
+    let location: String
+    let coordinates: CLLocationCoordinate2D
     let description: String
     let imageMap: String
     let date: String

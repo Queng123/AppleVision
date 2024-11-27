@@ -18,7 +18,7 @@ struct MapView: View {
     var body: some View {
             Map(position: $region) {
                 ForEach(events) { event in
-                    Marker(event.title, coordinate: event.location)
+                    Marker(event.title, coordinate: event.coordinates)
                 }
 
             }
