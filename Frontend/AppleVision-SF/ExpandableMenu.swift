@@ -11,6 +11,7 @@ struct ExpandableMenu: View {
     @Binding var isExpanded: Bool
     @Binding var searchText: String
     @Binding var events: [Event]
+    var onEventSelected: (Event) -> Void
 
     var body: some View {
         VStack {
@@ -19,14 +20,18 @@ struct ExpandableMenu: View {
                     .padding(.horizontal)
                     .padding(.top)
                 List(filteredEvents) { event in
-                    VStack(alignment: .leading) {
-                        Text(event.title)
-                            .font(.headline)
-                        Text("\(event.location) - \(event.date)")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
+                    Button(action: {
+                        onEventSelected(event)
+                    }) {
+                        VStack(alignment: .leading) {
+                            Text(event.title)
+                                .font(.headline)
+                            Text("\(event.location) - \(event.date)")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                        }
+                        .padding(.vertical, 5)
                     }
-                    .padding(.vertical, 5)
                 }
                 .frame(maxHeight: 300)
             }
