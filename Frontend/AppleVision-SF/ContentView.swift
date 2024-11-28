@@ -13,17 +13,35 @@ struct ContentView: View {
     @State private var searchText = ""
     @State private var isMenuExpanded = false
     @State private var events: [Event] = []
+    @State private var selectedEvent: Event? = nil
 
     var body: some View {
-        VStack {
-            MapView(events: $events)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .edgesIgnoringSafeArea(.all)
-            
-            ExpandableMenu(isExpanded: $isMenuExpanded, searchText: $searchText, events: $events)
+        ZStack {
+            VStack {
+                MapView(events: $events, selectedEvent: $selectedEvent)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .edgesIgnoringSafeArea(.all)
+                
+                ExpandableMenu(
+                    isExpanded: $isMenuExpanded,
+                    searchText: $searchText,
+                    events: $events,
+                    onEventSelected: { event in
+                        selectedEvent = event
+                    }
+                )
+            }
+
+            // Overlay for event details
+            if let selectedEvent = selectedEvent {
+                EventDetailOverlay(event: selectedEvent) {
+                    self.selectedEvent = nil // Close the overlay
+                }
+            }
         }
         .onAppear {
             fetchEvents()
+            print(events)
         }
     }
 

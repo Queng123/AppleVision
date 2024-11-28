@@ -10,9 +10,11 @@ import MapKit
 
 struct MapView: View {
     @Binding var events: [Event]
+    @Binding var selectedEvent: Event? // For modal view
 
     @State private var region = MapCameraPosition.region(MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),        span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
+        span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
     )
     
     var body: some View {
@@ -21,9 +23,10 @@ struct MapView: View {
                     Marker(event.title, systemImage: event.mapInfo.imageMarker ,coordinate: event.mapInfo.coordinates)
                         .tint(event.mapInfo.colorMarker)
                 }
-
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .edgesIgnoringSafeArea(.all)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .edgesIgnoringSafeArea(.all)
+    }
 }
+
