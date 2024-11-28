@@ -18,15 +18,15 @@ struct MapView: View {
     )
     
     var body: some View {
-            Map(position: $region) {
-                ForEach(events) { event in
-                    Marker(event.title, systemImage: event.mapInfo.imageMarker ,coordinate: event.mapInfo.coordinates)
-                        .tint(event.mapInfo.colorMarker)
-                }
+        Map(position: $region) {
+            ForEach(events) { event in
+                Marker(event.title, systemImage: event.mapInfo.imageMarker ,coordinate: event.mapInfo.coordinates)
+                    .tint(event.mapInfo.colorMarker)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .edgesIgnoringSafeArea(.all)
     }
+    
 }
 
