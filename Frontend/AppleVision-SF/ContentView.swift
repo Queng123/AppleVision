@@ -32,10 +32,9 @@ struct ContentView: View {
                 )
             }
 
-            // Overlay for event details
             if let selectedEvent = selectedEvent {
                 EventDetailOverlay(event: selectedEvent) {
-                    self.selectedEvent = nil // Close the overlay
+                    self.selectedEvent = nil
                 }
             }
         }
