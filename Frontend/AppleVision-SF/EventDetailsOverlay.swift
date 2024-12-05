@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct EventDetailOverlay: View {
     let event: Event
     let onClose: () -> Void
+    var selectedEvent: Event?
+
+    @State private var lookaroundScene: MKLookAroundScene?
+    
 
     init(event: Event, onClose: @escaping () -> Void) {
             self.event = event
@@ -26,24 +31,38 @@ struct EventDetailOverlay: View {
                 }
             
             VStack {
-                VStack(alignment: .leading) {
-                    Text(event.title)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .padding()
-                    
-                    
-                    Text("Location: \(event.location)")
-                        .font(.headline)
-                        .padding(.bottom, 2)
-                    
-                    Text("Date: \(event.date)")
-                        .font(.subheadline)
-                        .padding(.bottom, 10)
-                    
-                    Text(event.description)
-                        .font(.body)
-                        .padding()
+                VStack {
+                    VStack{
+                        Text(event.title)
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .padding()
+                        
+                        
+                        Text("Location: \(event.location)")
+                            .font(.headline)
+                            .padding(.bottom, 2)
+                        
+                        Text("Date: \(event.date)")
+                            .font(.subheadline)
+                            .padding(.bottom, 10)
+                        
+                        Text(event.description)
+                            .font(.body)
+                            .padding()
+                    }
+                    .padding()
+                    HStack{
+                        // Street View
+                        if let lookaroundScene {
+                            LookAroundPreview(initialScene: lookaroundScene)
+                                .frame( width: 400, height: 200)
+                                .padding()
+                        } else {
+                            ContentUnavailableView("No preview available", systemImage: "eye.slash")
+                        }
+                        // MISSING: Immersive View
+                    }
                 }
                 .frame(width: 1000, height: 800)
                 .padding()
@@ -51,8 +70,6 @@ struct EventDetailOverlay: View {
                 .foregroundColor(.black)
                 .cornerRadius(15)
                 .shadow(radius: 10)
-                
-                
                 Button(action: onClose) {
                     Text("Close")
                         .font(.headline)
@@ -64,6 +81,18 @@ struct EventDetailOverlay: View {
                 }
                 .padding()
             }
+            .task {
+                await fetchLookaroundPreview()
+            }
+        }
+    }
+    func fetchLookaroundPreview() async {
+        lookaroundScene = nil
+        let lookaroundRequest = MKLookAroundSceneRequest(coordinate: event.mapInfo.coordinates)
+        do {
+            lookaroundScene = try await lookaroundRequest.scene
+        } catch {
+            print("Error fetching LookAround scene: \(error)")
         }
     }
 }

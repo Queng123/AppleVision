@@ -10,7 +10,7 @@ import MapKit
 
 struct MapView: View {
     @Binding var events: [Event]
-    @Binding var selectedEvent: Event? // For modal view
+    @Binding var selectedEvent: Event? 
 
     @State private var region = MapCameraPosition.region(MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
