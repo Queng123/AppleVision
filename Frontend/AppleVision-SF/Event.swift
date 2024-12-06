@@ -13,6 +13,7 @@ struct Event: Identifiable {
     let title: String
     let location: String
     let description: String
+    let ticketLink: String
     let date: String
     let mapInfo: MapInfo
 
@@ -22,10 +23,11 @@ struct Event: Identifiable {
         let coordinates: CLLocationCoordinate2D
     }
     
-    init(title: String, location: String, description: String, date: String, mapInfo: MapInfo) {
+    init(title: String, location: String, description: String, ticketLink: String, date: String, mapInfo: MapInfo) {
         self.title = title
         self.location = location
         self.description = description
+        self.ticketLink = ticketLink
         self.date = date
         self.mapInfo = mapInfo
     }
