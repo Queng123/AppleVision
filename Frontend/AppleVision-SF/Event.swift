@@ -8,7 +8,7 @@ import Foundation
 import MapKit
 import SwiftUI
 
-struct Event: Identifiable {
+struct Event: Identifiable, Hashable {
     let id = UUID()
     let title: String
     let location: String
@@ -30,5 +30,15 @@ struct Event: Identifiable {
         self.ticketLink = ticketLink
         self.date = date
         self.mapInfo = mapInfo
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
+extension Event: Equatable {
+    static func == (lhs: Event, rhs: Event) -> Bool {
+        return lhs.id == rhs.id
     }
 }
