@@ -19,6 +19,6 @@ struct AppleVision_SFApp: App {
             } else {
                 ContentView()
             }
-        }
+        }.defaultSize(CGSize(width: 2000, height: 1500))
     }
 }

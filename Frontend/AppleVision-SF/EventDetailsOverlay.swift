@@ -80,9 +80,16 @@ struct EventDetailOverlay: View {
                         } else {
                             ContentUnavailableView("No preview available", systemImage: "eye.slash")
                         }
-                        // MISSING: Immersive View
-                        Button("Play spatial video") {
+                        Button(action: {
                             playSpatialVideo()
+                        }) {
+                            Text("Play spatial video")
+                                .font(.headline)
+                                .frame(width: 200, height: 25)
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
                         }
 
                     }
