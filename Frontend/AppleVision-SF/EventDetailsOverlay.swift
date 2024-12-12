@@ -58,6 +58,17 @@ struct EventDetailOverlay: View {
                         Text(event.description)
                             .font(.body)
                             .padding()
+                        Button(action: {
+                            if let url = URL(string: event.ticketLink) {
+                                    UIApplication.shared.open(url)
+                                }
+                            }) {
+                                Text("Buy tickets here!")
+                                    .padding()
+                                    .background(Color.blue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(8)
+                            }
                     }
                     .padding()
                     VStack{

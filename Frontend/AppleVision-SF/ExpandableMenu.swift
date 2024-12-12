@@ -61,7 +61,10 @@ struct ExpandableMenu: View {
         if searchText.isEmpty {
             return events
         } else {
-            return events.filter { $0.title.contains(searchText) }
+            return events.filter { event in
+                event.title.localizedCaseInsensitiveContains(searchText) ||
+                event.location.localizedCaseInsensitiveContains(searchText)
+            }
         }
     }
 }
