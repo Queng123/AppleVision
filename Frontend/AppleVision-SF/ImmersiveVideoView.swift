@@ -1,8 +1,8 @@
 //
 //  ImmersiveVideoView.swift
-//  AppleVision-SF2
+//  AppleVision-SF
 //
-//  Created by Noah tesson on 12/8/24.
+//  Created by Noah tesson on 12/11/24.
 //
 
 import SwiftUI

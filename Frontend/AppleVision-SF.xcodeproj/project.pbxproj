@@ -7,68 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CDEAA0B62D06635100A7E6A3 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = CDEAA0B52D06635100A7E6A3 /* RealityKitContent */; };
+		CD04DD792D0A6B1C00A44828 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = CD04DD782D0A6B1C00A44828 /* RealityKitContent */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CDEAA0B02D06635100A7E6A3 /* AppleVision-SF2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppleVision-SF2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDEAA0B42D06635100A7E6A3 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		CD04DD732D0A6B1C00A44828 /* AppleVision-SF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppleVision-SF.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD04DD772D0A6B1C00A44828 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		CDEAA0CB2D06635300A7E6A3 /* Exceptions for "AppleVision-SF2" folder in "AppleVision-SF2" target */ = {
+		CD04DD8E2D0A6B1D00A44828 /* Exceptions for "AppleVision-SF" folder in "AppleVision-SF" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = CDEAA0AF2D06635100A7E6A3 /* AppleVision-SF2 */;
+			target = CD04DD722D0A6B1C00A44828 /* AppleVision-SF */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CDEAA0B22D06635100A7E6A3 /* AppleVision-SF2 */ = {
+		CD04DD752D0A6B1C00A44828 /* AppleVision-SF */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				CDEAA0CB2D06635300A7E6A3 /* Exceptions for "AppleVision-SF2" folder in "AppleVision-SF2" target */,
+				CD04DD8E2D0A6B1D00A44828 /* Exceptions for "AppleVision-SF" folder in "AppleVision-SF" target */,
 			);
-			path = "AppleVision-SF2";
+			path = "AppleVision-SF";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CDEAA0AD2D06635100A7E6A3 /* Frameworks */ = {
+		CD04DD702D0A6B1C00A44828 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDEAA0B62D06635100A7E6A3 /* RealityKitContent in Frameworks */,
+				CD04DD792D0A6B1C00A44828 /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CDEAA0A72D06635100A7E6A3 = {
+		CD04DD6A2D0A6B1C00A44828 = {
 			isa = PBXGroup;
 			children = (
-				CDEAA0B22D06635100A7E6A3 /* AppleVision-SF2 */,
-				CDEAA0B32D06635100A7E6A3 /* Packages */,
-				CDEAA0B12D06635100A7E6A3 /* Products */,
+				CD04DD752D0A6B1C00A44828 /* AppleVision-SF */,
+				CD04DD762D0A6B1C00A44828 /* Packages */,
+				CD04DD742D0A6B1C00A44828 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CDEAA0B12D06635100A7E6A3 /* Products */ = {
+		CD04DD742D0A6B1C00A44828 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDEAA0B02D06635100A7E6A3 /* AppleVision-SF2.app */,
+				CD04DD732D0A6B1C00A44828 /* AppleVision-SF.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CDEAA0B32D06635100A7E6A3 /* Packages */ = {
+		CD04DD762D0A6B1C00A44828 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				CDEAA0B42D06635100A7E6A3 /* RealityKitContent */,
+				CD04DD772D0A6B1C00A44828 /* RealityKitContent */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -76,65 +76,65 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CDEAA0AF2D06635100A7E6A3 /* AppleVision-SF2 */ = {
+		CD04DD722D0A6B1C00A44828 /* AppleVision-SF */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDEAA0CC2D06635300A7E6A3 /* Build configuration list for PBXNativeTarget "AppleVision-SF2" */;
+			buildConfigurationList = CD04DD8F2D0A6B1D00A44828 /* Build configuration list for PBXNativeTarget "AppleVision-SF" */;
 			buildPhases = (
-				CDEAA0AC2D06635100A7E6A3 /* Sources */,
-				CDEAA0AD2D06635100A7E6A3 /* Frameworks */,
-				CDEAA0AE2D06635100A7E6A3 /* Resources */,
+				CD04DD6F2D0A6B1C00A44828 /* Sources */,
+				CD04DD702D0A6B1C00A44828 /* Frameworks */,
+				CD04DD712D0A6B1C00A44828 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				CDEAA0B22D06635100A7E6A3 /* AppleVision-SF2 */,
+				CD04DD752D0A6B1C00A44828 /* AppleVision-SF */,
 			);
-			name = "AppleVision-SF2";
+			name = "AppleVision-SF";
 			packageProductDependencies = (
-				CDEAA0B52D06635100A7E6A3 /* RealityKitContent */,
+				CD04DD782D0A6B1C00A44828 /* RealityKitContent */,
 			);
-			productName = "AppleVision-SF2";
-			productReference = CDEAA0B02D06635100A7E6A3 /* AppleVision-SF2.app */;
+			productName = "AppleVision-SF";
+			productReference = CD04DD732D0A6B1C00A44828 /* AppleVision-SF.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CDEAA0A82D06635100A7E6A3 /* Project object */ = {
+		CD04DD6B2D0A6B1C00A44828 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					CDEAA0AF2D06635100A7E6A3 = {
+					CD04DD722D0A6B1C00A44828 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
-			buildConfigurationList = CDEAA0AB2D06635100A7E6A3 /* Build configuration list for PBXProject "AppleVision-SF2" */;
+			buildConfigurationList = CD04DD6E2D0A6B1C00A44828 /* Build configuration list for PBXProject "AppleVision-SF" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = CDEAA0A72D06635100A7E6A3;
+			mainGroup = CD04DD6A2D0A6B1C00A44828;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = CDEAA0B12D06635100A7E6A3 /* Products */;
+			productRefGroup = CD04DD742D0A6B1C00A44828 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CDEAA0AF2D06635100A7E6A3 /* AppleVision-SF2 */,
+				CD04DD722D0A6B1C00A44828 /* AppleVision-SF */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CDEAA0AE2D06635100A7E6A3 /* Resources */ = {
+		CD04DD712D0A6B1C00A44828 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -144,7 +144,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CDEAA0AC2D06635100A7E6A3 /* Sources */ = {
+		CD04DD6F2D0A6B1C00A44828 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -154,14 +154,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		CDEAA0CD2D06635300A7E6A3 /* Debug */ = {
+		CD04DD902D0A6B1D00A44828 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AppleVision-SF2/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AppleVision-SF/Preview Content\"";
 				DEVELOPMENT_TEAM = 8DJ9Q6DL4F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -171,7 +171,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.sfsu.AppleVision-SF2";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.sfsu.AppleVision-SF";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -180,14 +180,14 @@
 			};
 			name = Debug;
 		};
-		CDEAA0CE2D06635300A7E6A3 /* Release */ = {
+		CD04DD912D0A6B1D00A44828 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AppleVision-SF2/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AppleVision-SF/Preview Content\"";
 				DEVELOPMENT_TEAM = 8DJ9Q6DL4F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -197,7 +197,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.sfsu.AppleVision-SF2";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.sfsu.AppleVision-SF";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -206,7 +206,7 @@
 			};
 			name = Release;
 		};
-		CDEAA0CF2D06635300A7E6A3 /* Debug */ = {
+		CD04DD922D0A6B1D00A44828 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -269,7 +269,7 @@
 			};
 			name = Debug;
 		};
-		CDEAA0D02D06635300A7E6A3 /* Release */ = {
+		CD04DD932D0A6B1D00A44828 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -328,20 +328,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CDEAA0AB2D06635100A7E6A3 /* Build configuration list for PBXProject "AppleVision-SF2" */ = {
+		CD04DD6E2D0A6B1C00A44828 /* Build configuration list for PBXProject "AppleVision-SF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CDEAA0CF2D06635300A7E6A3 /* Debug */,
-				CDEAA0D02D06635300A7E6A3 /* Release */,
+				CD04DD922D0A6B1D00A44828 /* Debug */,
+				CD04DD932D0A6B1D00A44828 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDEAA0CC2D06635300A7E6A3 /* Build configuration list for PBXNativeTarget "AppleVision-SF2" */ = {
+		CD04DD8F2D0A6B1D00A44828 /* Build configuration list for PBXNativeTarget "AppleVision-SF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CDEAA0CD2D06635300A7E6A3 /* Debug */,
-				CDEAA0CE2D06635300A7E6A3 /* Release */,
+				CD04DD902D0A6B1D00A44828 /* Debug */,
+				CD04DD912D0A6B1D00A44828 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -349,11 +349,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CDEAA0B52D06635100A7E6A3 /* RealityKitContent */ = {
+		CD04DD782D0A6B1C00A44828 /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = CDEAA0A82D06635100A7E6A3 /* Project object */;
+	rootObject = CD04DD6B2D0A6B1C00A44828 /* Project object */;
 }
