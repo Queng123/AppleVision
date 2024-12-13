@@ -1,17 +1,25 @@
 //
-//  Event.swift
+//  EventDetailsOverlay.swift
 //  AppleVision-SF
 //
-//  Created by Tom Backert on 26.11.24.
+//  Created by Noah tesson on 12/11/24.
 //
 
 import SwiftUI
 import MapKit
+import AVKit
+import RealityKit
+
+import QuickLook
 
 struct EventDetailOverlay: View {
     let event: Event
     let onClose: () -> Void
     var selectedEvent: Event?
+
+    
+    @State private var isVideoPlaying = false
+    @State private var videoPlayer: AVPlayer?
 
     @State private var lookaroundScene: MKLookAroundScene?
     
@@ -63,7 +71,7 @@ struct EventDetailOverlay: View {
                             }
                     }
                     .padding()
-                    HStack{
+                    VStack{
                         // Street View
                         if let lookaroundScene {
                             LookAroundPreview(initialScene: lookaroundScene)
@@ -72,8 +80,23 @@ struct EventDetailOverlay: View {
                         } else {
                             ContentUnavailableView("No preview available", systemImage: "eye.slash")
                         }
-                        // MISSING: Immersive View
+                        Button(action: {
+                            playSpatialVideo()
+                        }) {
+                            Text("Play spatial video")
+                                .font(.headline)
+                                .frame(width: 200, height: 25)
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                        }
+
                     }
+                    .onDisappear {
+                       // Stop video when the view disappears
+                       videoPlayer?.pause()
+                   }
                 }
                 .frame(width: 1000, height: 800)
                 .padding()
@@ -97,6 +120,29 @@ struct EventDetailOverlay: View {
             }
         }
     }
+    
+    private func playSpatialVideo() {
+        guard let videoURL = Bundle.main.url(forResource: "spatialVideo", withExtension: "MOV") else {
+            print("Video file not found.")
+            return
+        }
+
+        // Initialize AVPlayer
+        videoPlayer = AVPlayer(url: videoURL)
+        
+        // Create an AVPlayerViewController for playback
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = videoPlayer
+        
+        // Present in a VisionOS environment
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            let hostingController = UIHostingController(rootView: PlayerView(player: videoPlayer!))
+            windowScene.windows.first?.rootViewController?.present(hostingController, animated: true, completion: {
+                videoPlayer?.play()
+            })
+        }
+    }
+    
     func fetchLookaroundPreview() async {
         lookaroundScene = nil
         let lookaroundRequest = MKLookAroundSceneRequest(coordinate: event.mapInfo.coordinates)
@@ -108,3 +154,15 @@ struct EventDetailOverlay: View {
     }
 }
 
+struct PlayerView: UIViewControllerRepresentable {
+    let player: AVPlayer
+
+    func makeUIViewController(context: Context) -> AVPlayerViewController {
+        let controller = AVPlayerViewController()
+        controller.player = player
+        controller.showsPlaybackControls = true
+        return controller
+    }
+
+    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {}
+}

@@ -2,7 +2,7 @@
 //  ExpandableMenu.swift
 //  AppleVision-SF
 //
-//  Created by Quentin Brejoin on 11/26/24.
+//  Created by Noah tesson on 12/11/24.
 //
 
 import SwiftUI
@@ -61,7 +61,10 @@ struct ExpandableMenu: View {
         if searchText.isEmpty {
             return events
         } else {
-            return events.filter { $0.title.contains(searchText) }
+            return events.filter { event in
+                event.title.localizedCaseInsensitiveContains(searchText) ||
+                event.location.localizedCaseInsensitiveContains(searchText)
+            }
         }
     }
 }
