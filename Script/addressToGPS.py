@@ -1,4 +1,5 @@
 from geopy.geocoders import Nominatim
+import sys
 
 def address_to_coordinates(address):
     geolocator = Nominatim(user_agent="addressToGPS")
@@ -9,7 +10,11 @@ def address_to_coordinates(address):
         return None
 
 if __name__ == "__main__":
-    address = "750 font bvd, San Francisco, CA 94132"
+    if len(sys.argv) < 2:
+        print("Usage: python3 script.py 'adresse complète'")
+        sys.exit(1)
+    address = " ".join(sys.argv[1:])
+
     coordinates = address_to_coordinates(address)
     if coordinates:
         print(f"Coordinates for {address}: {coordinates}")
