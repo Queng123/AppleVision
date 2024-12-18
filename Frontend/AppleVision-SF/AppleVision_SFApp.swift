@@ -2,17 +2,23 @@
 //  AppleVision_SFApp.swift
 //  AppleVision-SF
 //
-//  Created by Quentin Brejoin on 11/4/24.
+//  Created by Noah tesson on 12/11/24.
 //
 
 import SwiftUI
 
 @main
 struct AppleVision_SFApp: App {
+    
+    @State private var avPlayerViewModel = AVPlayerViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
-        .windowStyle(.volumetric)
+            if avPlayerViewModel.isPlaying {
+                AVPlayerView(viewModel: avPlayerViewModel)
+            } else {
+                ContentView()
+            }
+        }.defaultSize(CGSize(width: 2000, height: 1500))
     }
 }
