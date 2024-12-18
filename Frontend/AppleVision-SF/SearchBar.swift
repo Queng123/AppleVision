@@ -29,6 +29,12 @@ struct SearchBar: UIViewRepresentable {
     func makeUIView(context: Context) -> UISearchBar {
         let searchBar = UISearchBar(frame: .zero)
         searchBar.delegate = context.coordinator
+        searchBar.placeholder = "Search for event"
+        searchBar.searchTextField.attributedPlaceholder = NSAttributedString(
+            string: "Search for event",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+        )
+        searchBar.searchTextField.textColor = .black
         return searchBar
     }
 

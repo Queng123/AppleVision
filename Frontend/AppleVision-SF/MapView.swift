@@ -20,9 +20,15 @@ struct MapView: View {
     var body: some View {
         Map(position: $region, selection: $selectedEvent) {
             ForEach(events) { event in
-                Marker(event.title, systemImage: event.mapInfo.imageMarker ,coordinate: event.mapInfo.coordinates)
-                    .tint(event.mapInfo.colorMarker)
-                    .tag(event)
+                if let mapInfo = event.mapInfo {
+                        Marker(
+                            event.title,
+                            systemImage: mapInfo.imageMarker,
+                            coordinate: mapInfo.coordinates
+                        )
+                        .tint(mapInfo.colorMarker)
+                        .tag(event)
+                    }
             }
         }
         
