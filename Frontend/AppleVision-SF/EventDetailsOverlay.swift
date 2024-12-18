@@ -81,7 +81,7 @@ struct EventDetailOverlay: View {
                             ContentUnavailableView("No preview available", systemImage: "eye.slash")
                         }
                         Button(action: {
-                            playSpatialVideo()
+                            playSpatialVideo(event.spacialVideoLink)
                         }) {
                             Text("Play spatial video")
                                 .font(.headline)
@@ -121,8 +121,8 @@ struct EventDetailOverlay: View {
         }
     }
     
-    private func playSpatialVideo() {
-        guard let videoURL = Bundle.main.url(forResource: "spatialVideo", withExtension: "MOV") else {
+    private func playSpatialVideo(_ spatialVideoLink: String) {
+        guard let videoURL = Bundle.main.url(forResource: spatialVideoLink, withExtension: "MOV") else {
             print("Video file not found.")
             return
         }
@@ -145,11 +145,13 @@ struct EventDetailOverlay: View {
     
     func fetchLookaroundPreview() async {
         lookaroundScene = nil
-        let lookaroundRequest = MKLookAroundSceneRequest(coordinate: event.mapInfo.coordinates)
-        do {
-            lookaroundScene = try await lookaroundRequest.scene
-        } catch {
-            print("Error fetching LookAround scene: \(error)")
+        if let coordinates = event.mapInfo?.coordinates {
+            let lookaroundRequest = MKLookAroundSceneRequest(coordinate: coordinates)
+            do {
+                lookaroundScene = try await lookaroundRequest.scene
+            } catch {
+                print("Error fetching LookAround scene: \(error)")
+            }
         }
     }
 }

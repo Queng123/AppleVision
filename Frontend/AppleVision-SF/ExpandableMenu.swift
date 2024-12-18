@@ -26,9 +26,10 @@ struct ExpandableMenu: View {
                         VStack(alignment: .leading) {
                             Text(event.title)
                                 .font(.headline)
+                                .foregroundColor(.black)
                             Text("\(event.location) - \(event.date)")
                                 .font(.subheadline)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(.black)
                         }
                         .padding(.vertical, 5)
                     }
@@ -41,7 +42,7 @@ struct ExpandableMenu: View {
                     isExpanded.toggle()
                 }
             }) {
-                Text(isExpanded ? "Collapse Menu" : "Expand Menu")
+                Text(isExpanded ? "Collapse Events Menu" : "Expand Events Menu")
                     .font(.headline)
                     .frame(maxWidth: .infinity)
                     .padding()
