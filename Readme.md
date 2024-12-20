@@ -6,8 +6,7 @@ The user can see several details of the event by clicking on the marker, like th
 
 # Demo
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=xSu7KKH1IH0" frameborder="0" allowfullscreen></iframe>
-
+[![Video Title](https://img.youtube.com/vi/xSu7KKH1IH0/0.jpg)](https://www.youtube.com/watch?v=xSu7KKH1IH0)
 
 # Technologies
 
