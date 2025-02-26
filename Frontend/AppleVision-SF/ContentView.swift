@@ -15,13 +15,15 @@ struct ContentView: View {
     @State private var events: [Event] = []
     @State private var selectedEvent: Event? = nil
 
+    @State private var showImageGrid = false
+
     var body: some View {
         ZStack {
             VStack {
                 MapView(events: $events, selectedEvent: $selectedEvent)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .edgesIgnoringSafeArea(.all)
-                
+                    
                 ExpandableMenu(
                     isExpanded: $isMenuExpanded,
                     searchText: $searchText,
@@ -32,6 +34,28 @@ struct ContentView: View {
                 )
             }
 
+            VStack {
+                Spacer()
+                HStack {
+                    Button(action: {
+                        showImageGrid.toggle()
+                    }) {
+                        Image(systemName: "photo.on.rectangle.angled")
+                            .font(.title2)
+                            .padding()
+                            .background(Color(.systemBackground))
+                            .clipShape(Circle())
+                            .shadow(radius: 4)
+                    }
+                    Spacer()
+                }
+                .padding()
+            }
+
+            if showImageGrid {
+                ImageRecommandation()
+            }
+            
             if let selectedEvent = selectedEvent {
                 EventDetailOverlay(event: selectedEvent) {
                     self.selectedEvent = nil
