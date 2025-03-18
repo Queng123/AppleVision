@@ -18,18 +18,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             VStack {
-                MapView(events: $events, selectedEvent: $selectedEvent)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .edgesIgnoringSafeArea(.all)
-                
-                ExpandableMenu(
-                    isExpanded: $isMenuExpanded,
-                    searchText: $searchText,
-                    events: $events,
-                    onEventSelected: { event in
-                        selectedEvent = event
-                    }
-                )
+                TabletopView()
             }
 
             if let selectedEvent = selectedEvent {
